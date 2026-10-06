@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="个人作品集展示 - 简介、技能、项目经历与联系方式" />
+  <title>个人作品集 | 小陈</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ 左侧固定侧栏 ============ -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20headshot%20portrait%20of%20a%20young%20chinese%20man,%20male%20software%20developer,%20short%20black%20hair,%20neat%20casual%20beige%20sweater,%20soft%20studio%20lighting,%20plain%20warm%20grey%20background,%20morandi%20muted%20colors,%20photorealistic,%20sharp%20focus,%20head%20and%20shoulders&image_size=square_hd"
+          alt="个人头像"
+        />
+      </div>
+
+      <h1 class="name">小陈</h1>
+      <p class="role">大数据专业学生 · AI 辅助开发与大语言模型</p>
+      <p class="intro">我是一名大数据专业学生，目前主要关注 AI 辅助开发与大语言模型技术。平时主要使用 Python、Java 和 TypeScript 进行项目开发。</p>
+
+      <ul class="skills" aria-label="技能标签">
+        <li>Python</li>
+        <li>Java</li>
+        <li>TypeScript</li>
+        <li>HTML/CSS</li>
+      </ul>
+
+      <nav class="nav" aria-label="主导航">
+        <a class="nav-link" href="#projects" data-target="projects">项目作品</a>
+        <a class="nav-link" href="#about" data-target="about">关于我</a>
+        <a class="nav-link" href="#contact" data-target="contact">联系方式</a>
+      </nav>
+
+      <p class="copyright">© 2026 小陈</p>
+    </div>
+  </aside>
+
+  <!-- ============ 移动端顶栏 ============ -->
+  <header class="m-header">
+    <a class="m-brand" href="#top">小陈</a>
+    <button
+      class="m-toggle"
+      id="mToggle"
+      type="button"
+      aria-label="打开菜单"
+      aria-expanded="false"
+      aria-controls="mMenu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="m-menu" id="mMenu" aria-label="移动端导航" aria-hidden="true">
+      <a href="#projects">项目作品</a>
+      <a href="#about">关于我</a>
+      <a href="#contact">联系方式</a>
+    </nav>
+  </header>
+
+  <!-- ============ 右侧主内容 ============ -->
+  <main class="main" id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <p class="hero-eyebrow">PORTFOLIO · 2026</p>
+      <h2 class="hero-title">你好，我是<span class="accent">小陈</span>。<br />这里记录我的作品与成长。</h2>
+      <p class="hero-sub">从想法到界面，从代码到细节 —— 认真打磨每一个作品。</p>
+    </section>
+
+    <!-- 项目作品 -->
+    <section class="section" id="projects">
+      <header class="section-head">
+        <span class="section-no">01</span>
+        <h2 class="section-title">项目作品</h2>
+        <p class="section-sub">Projects</p>
+      </header>
+
+      <!-- 项目一：轻记账 · 大图 + 文字 -->
+      <article class="project project--featured reveal">
+        <div class="project-media">
+          <img
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=minimalist%20analytics%20dashboard%20ui%20on%20laptop%20screen,%20clean%20line%20charts%20and%20data%20cards,%20morandi%20sage%20green%20and%20warm%20beige%20palette,%20modern%20ui%20design,%20soft%20light,%20photorealistic,%20high%20quality&image_size=landscape_16_9"
+            alt="轻记账微信小程序项目配图"
+          />
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-category">移动应用</span>
+            <time class="project-time">2025.04</time>
+          </div>
+          <h3 class="project-title">轻记账</h3>
+          <p class="project-desc">
+            一款面向日常生活场景的极简记账微信小程序，重点解决快速记录和查看个人收支的问题。项目支持语音快捷记账、月度收支统计和预算提醒，并使用微信云开发完成数据存储与后端能力。
+          </p>
+          <ul class="project-tech">
+            <li>TypeScript</li>
+            <li>微信小程序</li>
+            <li>微信云开发</li>
+            <li>ECharts</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 项目二：拾光集市 · 图文左右分栏（图左文右） -->
+      <article class="project project--split reveal">
+        <div class="project-media">
+          <img
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=three%20smartphone%20mockups%20on%20beige%20desk%20showing%20warm%20toned%20lifestyle%20app%20interface,%20morandi%20dusty%20rose%20cream%20and%20grey%20colors,%20modern%20mobile%20ui%20design%20showcase,%20soft%20shadows,%20photorealistic%20product%20shot&image_size=landscape_16_9"
+            alt="拾光集市二手交易平台项目配图"
+          />
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-category">Web应用</span>
+            <time class="project-time">2025.09</time>
+          </div>
+          <h3 class="project-title">拾光集市</h3>
+          <p class="project-desc">
+            一个面向校园场景的二手交易平台，提供商品发布、关键词检索、站内私信和信用评分等功能。从需求梳理、界面设计到主要接口开发均独立完成，上线测试后累计注册用户超过 300 人。
+          </p>
+          <ul class="project-tech">
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>MySQL</li>
+            <li>TypeScript</li>
+            <li>Vue</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 项目三：城市脉搏 · 图文左右分栏（图右文左） -->
+      <article class="project project--split project--reverse reveal">
+        <div class="project-media">
+          <img
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=elegant%20data%20visualization%20infographic%20poster,%20line%20graph%20and%20bar%20chart,%20morandi%20muted%20blue%20beige%20and%20grey%20palette,%20on%20a%20designer%20desk%20with%20notebook%20and%20pen,%20soft%20daylight,%20professional,%20photorealistic&image_size=landscape_16_9"
+            alt="城市脉搏数据可视化大屏项目配图"
+          />
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-category">数据可视化</span>
+            <time class="project-time">2026.03</time>
+          </div>
+          <h3 class="project-title">城市脉搏</h3>
+          <p class="project-desc">
+            一个城市实时交通与天气数据可视化大屏，用于集中展示交通、天气和城市运行信息。项目通过多数据源轮询聚合数据，并结合 SVG 图表、Canvas 粒子地图和响应式布局实现大屏可视化展示。
+          </p>
+          <ul class="project-tech">
+            <li>TypeScript</li>
+            <li>HTML/CSS</li>
+            <li>Canvas</li>
+            <li>SVG</li>
+            <li>ECharts</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 项目四：课语通 · 图文左右分栏（图左文右） -->
+      <article class="project project--split reveal">
+        <div class="project-media">
+          <img
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20course%20question%20answering%20assistant%20web%20app%20interface%20on%20laptop,%20chat%20conversation%20with%20cited%20sources%20panel,%20morandi%20sage%20green%20beige%20and%20warm%20grey%20palette,%20modern%20educational%20software%20UI,%20soft%20natural%20light,%20photorealistic,%20high%20quality&image_size=landscape_16_9"
+            alt="课语通课程问答助手项目配图"
+          />
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <span class="project-category">AI应用</span>
+            <time class="project-time">2026.07</time>
+          </div>
+          <h3 class="project-title">课语通</h3>
+          <p class="project-desc">
+            一个基于大语言模型的课程问答助手。用户上传课程资料后，系统能够建立知识索引，根据课程内容回答问题，并提供引用出处和知识点小测，帮助学生快速复习和整理课程重点。
+          </p>
+          <ul class="project-tech">
+            <li>Python</li>
+            <li>FastAPI</li>
+            <li>RAG</li>
+            <li>向量检索</li>
+            <li>大语言模型 API</li>
+            <li>Streamlit</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="section" id="about">
+      <header class="section-head">
+        <span class="section-no">02</span>
+        <h2 class="section-title">关于我</h2>
+        <p class="section-sub">About</p>
+      </header>
+      <p class="about-text">
+        我叫<strong>小陈</strong>，是一名大数据专业学生，目前主要关注 AI 辅助开发与大语言模型技术，现就读于广州软件学院。
+        平时主要使用 Python、Java 和 TypeScript 进行项目开发，也在持续学习前后端开发、数据可视化和 AI 应用构建。
+      </p>
+      <ul class="about-focus">
+        <li>前后端开发</li>
+        <li>数据可视化</li>
+        <li>AI 应用构建</li>
+      </ul>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="section" id="contact">
+      <header class="section-head">
+        <span class="section-no">03</span>
+        <h2 class="section-title">联系方式</h2>
+        <p class="section-sub">Contact</p>
+      </header>
+      <div class="contact-list">
+        <a class="contact-item" href="mailto:xiaohe@example.com">
+          <span class="label">EMAIL</span>
+          <span class="value">xiaohe@example.com</span>
+        </a>
+        <div class="contact-item">
+          <span class="label">WECHAT</span>
+          <span class="value">xiaohezi</span>
+        </div>
+        <a class="contact-item" href="https://github.com/xiaohe-dev" target="_blank" rel="noopener">
+          <span class="label">GITHUB</span>
+          <span class="value">github.com/xiaohe-dev</span>
+        </a>
+        <div class="contact-item">
+          <span class="label">LOCATION</span>
+          <span class="value">中国·广州</span>
+        </div>
+        <a class="contact-item" href="https://xiaohe.dev" target="_blank" rel="noopener">
+          <span class="label">WEBSITE</span>
+          <span class="value">xiaohe.dev</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">© 2026 小陈 · 由 HTML / CSS / JavaScript 纯手工构建</footer>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

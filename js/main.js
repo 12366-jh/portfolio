@@ -87,3 +87,38 @@
 
   items.forEach(function (el) { io.observe(el); });
 })();
+
+/* ---------- 4. 深浅色主题切换 ---------- */
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('themeToggle');
+  var KEY = 'portfolio-theme';
+
+  function apply(theme) {
+    var isDark = theme === 'dark';
+
+    if (isDark) {
+      root.setAttribute('data-theme', 'dark');
+    } else {
+      root.removeAttribute('data-theme');
+    }
+
+    if (btn) {
+      btn.setAttribute('aria-pressed', String(isDark));
+      btn.setAttribute('aria-label', isDark ? '切换到浅色主题' : '切换到深色主题');
+    }
+  }
+
+  // 读取用户上一次的选择；localStorage 不可用时回退为浅色主题
+  var saved = null;
+  try { saved = window.localStorage.getItem(KEY); } catch (e) { saved = null; }
+  apply(saved === 'dark' ? 'dark' : 'light');
+
+  if (!btn) return;
+
+  btn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    apply(next);
+    try { window.localStorage.setItem(KEY, next); } catch (e) { /* 忽略写入失败 */ }
+  });
+})();

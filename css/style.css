@@ -17,6 +17,10 @@
   --border:        #E4E0DB;  /* 分隔线 */
   --tag-bg:        #EAE7E2;  /* 标签底色 */
   --tag-text:      #6B6A66;  /* 标签文字 */
+  --header-bg:     rgba(250, 248, 244, .92);  /* 移动端顶栏背景（带透明） */
+  --category-text: #8A6A62;  /* 项目分类文字 */
+
+  color-scheme: light;
 
   /* 字体与字号 */
   --font: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -32,6 +36,25 @@
   /* 动效 */
   --ease: cubic-bezier(.22, .61, .36, 1);
   --dur:  .45s;
+}
+
+/* ---------- 1.1 深色主题（由 html[data-theme="dark"] 触发） ---------- */
+:root[data-theme="dark"] {
+  --bg:            #1B1A18;  /* 页面背景：暖调深炭灰 */
+  --bg-card:       #232220;  /* 侧栏 / 浮层背景 */
+  --text:          #E9E5E0;  /* 主文字 */
+  --text-muted:    #9C968F;  /* 次要文字 */
+  --accent:        #9FB5B1;  /* 强调色：提亮的莫兰迪灰绿 */
+  --accent-soft:   #343B3A;  /* 灰绿深调 */
+  --accent-2:      #C9B2AA;  /* 点缀色：莫兰迪陶土粉 */
+  --accent-2-soft: #38302D;  /* 陶土粉深调 */
+  --border:        #34312E;  /* 分隔线 */
+  --tag-bg:        #2C2A27;  /* 标签底色 */
+  --tag-text:      #ADA8A1;  /* 标签文字 */
+  --header-bg:     rgba(35, 34, 32, .92);  /* 移动端顶栏背景（带透明） */
+  --category-text: #D9BFB6;  /* 项目分类文字 */
+
+  color-scheme: dark;
 }
 
 /* ---------- 2. 基础 ---------- */
@@ -286,7 +309,7 @@ a { color: var(--accent); }
 .project-category {
   font-size: 12px;
   letter-spacing: 1px;
-  color: #8A6A62;
+  color: var(--category-text);
   background: var(--accent-2-soft);
   padding: 4px 10px;
   border-radius: 4px;
@@ -415,7 +438,7 @@ a { color: var(--accent); }
     align-items: center;
     justify-content: space-between;
     padding: 0 18px;
-    background: rgba(250, 248, 244, .92);
+    background: var(--header-bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
@@ -527,4 +550,54 @@ a { color: var(--accent); }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .project-media img { transition: none; }
+}
+
+/* ---------- 14. 主题切换按钮 ---------- */
+.theme-toggle {
+  position: fixed;
+  top: 24px;
+  right: 28px;
+  z-index: 120;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* 图标：浅色主题显示月亮，深色主题显示太阳 */
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* 切换主题时主要色块平滑过渡 */
+body,
+.sidebar,
+.m-header,
+.project-media,
+.theme-toggle {
+  transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease),
+              border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+@media (max-width: 899px) {
+  /* 移动端：置于顶栏内、汉堡按钮左侧 */
+  .theme-toggle { top: 8px; right: 62px; }
 }
